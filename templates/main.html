@@ -1,0 +1,24 @@
+{{define "main"}}
+<div class="product">
+    {{range .}}
+    <article class="main-article"
+        data-name="{{.Name}}"
+        data-authorMemb="{{.AuthorMemb}}"
+        data-creationDate="{{.CreationDate}}"
+        data-firstAlbumDate="{{.FirstAlbum}}"
+        data-allNames="{{.AllNames}}"
+    >
+        <a href="/artist/{{.Id}}">
+            <header class="header-article">
+                <img src="{{.Image}}" alt="{{.Name}}">
+            </header>
+            <footer class="footer-article">
+                <h3 class="title-article">
+                    {{.Name}}
+                </h3>
+            </footer>
+        </a>
+    </article>
+    {{end}}
+</div>
+{{end}}

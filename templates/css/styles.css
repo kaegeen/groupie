@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #f1f1f1;
+    --header-bg-color: #009879;
+    --text-color: #111111;
+    --accent-color: #cc2e2e;
+    --border-color: #dcdcdc;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --font-family-primary: 'Dosis', sans-serif;
+    --font-family-secondary: 'Dancing Script', cursive;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-family-primary);
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--main-bg-color);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #a59a9a;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-footer h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.footer {
+    background-color: var(--main-bg-color);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px var(--shadow-color);
+}
+
+table {
+    margin: 2rem auto;
+    border: 1px solid var(--border-color);
+    border-collapse: collapse;
+    width: 80%;
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+table thead tr {
+    background-color: var(--header-bg-color);
+    color: #ffffff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    background-color: #e6dddd;
+}
+
+.concert {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#search-input {
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+input[type=search]::-ms-clear, 
+input[type=search]::-ms-reveal,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}

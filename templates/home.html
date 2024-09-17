@@ -1,0 +1,25 @@
+{{define "main"}}
+<div class="product-container">
+    {{range .}}
+    <article class="product-card"
+        data-name="{{.Name}}" 
+        data-author-memb="{{.AuthorMemb}}" 
+        data-creation-date="{{.CreationDate}}" 
+        data-first-album-date="{{.FirstAlbum}}" 
+        data-all-names="{{.AllNames}}" 
+        aria-labelledby="product-title-{{.Id}}">
+        
+        <a href="/artist/{{.Id}}" title="View details for {{.Name}}" class="product-link">
+            <header class="product-header">
+                <img src="{{.Image}}" alt="{{.Name}}" class="product-image">
+            </header>
+            <footer class="product-footer">
+                <h3 id="product-title-{{.Id}}" class="product-title">
+                    {{.Name}}
+                </h3>
+            </footer>
+        </a>
+    </article>
+    {{end}}
+</div>
+{{end}}

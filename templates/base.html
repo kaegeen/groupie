@@ -1,0 +1,42 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the latest updates and information about artists and their concerts on Groupie Tracker.">
+    <meta name="keywords" content="artists, concerts, music, Groupie Tracker">
+    <meta name="author" content="Corentin, Hamza, Samir">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/img/favicon.jpg" type="image/png">
+
+    <link rel="stylesheet" href="/templates/css/styles.css">
+
+    <title>Groupie Tracker</title>
+</head>
+
+<body>
+   
+    <header>
+        {{template "nav" .}}
+    </header>
+
+    <main>
+        {{template "main" .}}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Ahmed. Tous droits réservés.</p>
+    </footer>
+
+    <script src="/templates/js/search.js" defer></script>
+</body>
+
+</html>
+{{end}}

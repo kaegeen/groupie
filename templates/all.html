@@ -1,0 +1,63 @@
+<!-- Main -->
+{{define "main"}}
+    {{range .}}
+    <div class="details">
+        <table class="artist-info">
+            <thead>
+                <tr>
+                    <th colspan="4" class="artist-name">{{.Name}}</th>
+                </tr>
+                <tr>
+                    <th>Image</th>
+                    <th>Members</th>
+                    <th>Creation Date</th>
+                    <th>First Album</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="{{.Image}}" alt="Image of {{.Name}}" title="{{.Name}}" class="artist-image" />
+                    </td>
+                    <td>
+                        <ul class="members-list">
+                            {{range .Members}}
+                            <li>{{.}}</li>
+                            {{end}}
+                        </ul>
+                    </td>
+                    <td>{{.CreationDate}}</td>
+                    <td>{{.FirstAlbum}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="concert-header">Upcoming Concerts for <span class="artist-name">{{.Name}}</span></h3>
+        <table class="concert-info">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Dates</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Concerts}}
+                <tr>
+                    <td>{{.Country}}</td>
+                    <td>{{.City}}</td>
+                    <td>
+                        <ul class="dates-list">
+                            {{range .Dates}}
+                            <li>{{.}}</li>
+                            {{end}}
+                        </ul>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+    {{end}}
+{{end}}
+

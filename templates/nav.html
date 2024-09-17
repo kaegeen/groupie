@@ -1,0 +1,38 @@
+{{define "nav"}}
+<header class="navbar">
+    <div class="container">
+        <h1><a href="/" title="Groupie Tracker">Groupie Tracker</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/" title="Home">Home</a></li>
+                <li><a href="/all" title="All Artists">All</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<aside class="searchbar">
+    <form role="search">
+        <label for="search-input" class="visually-hidden">Search for an artist:</label>
+        <input class="form-control" id="search-input" type="search" list="search-artist" placeholder="Search" aria-label="Search for an artist">
+        <datalist id="search-artist">
+        </datalist>
+
+        <fieldset>
+            <legend>Filter by Creation Date</legend>
+            <label for="creationdatestart">Creation start: <span id="valueStart">1950</span></label>
+            <input type="range" min="1950" max="2022" value="1950" id="creationdatestart" oninput="valueStart.innerText = this.value">
+            <label for="creationdateend">Creation end: <span id="valueEnd">2022</span></label>
+            <input type="range" min="1950" max="2022" value="2022" id="creationdateend" oninput="valueEnd.innerText = this.value">
+        </fieldset>
+
+        <fieldset>
+            <legend>Filter by First Album Date</legend>
+            <label for="firstalbumstart">First album start: <span id="valueAlbumStart">1950</span></label>
+            <input type="range" min="1950" max="2022" value="1950" id="firstalbumstart" oninput="valueAlbumStart.innerText = this.value">
+            <label for="firstalbumend">First album end: <span id="valueAlbumEnd">2022</span></label>
+            <input type="range" min="1950" max="2022" value="2022" id="firstalbumend" oninput="valueAlbumEnd.innerText = this.value">
+        </fieldset>
+    </form>
+</aside>
+{{end}}
